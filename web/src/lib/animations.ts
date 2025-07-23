@@ -11,7 +11,7 @@ export const fadeInUp: Variants = {
     y: 0,
     transition: {
       duration: 0.6,
-      ease: [0.25, 0.46, 0.45, 0.94]
+      ease: "easeOut"
     }
   }
 };
@@ -26,7 +26,7 @@ export const fadeInDown: Variants = {
     y: 0,
     transition: {
       duration: 0.6,
-      ease: [0.25, 0.46, 0.45, 0.94]
+      ease: "easeOut"
     }
   }
 };
@@ -41,7 +41,7 @@ export const fadeInLeft: Variants = {
     x: 0,
     transition: {
       duration: 0.8,
-      ease: [0.25, 0.46, 0.45, 0.94]
+      ease: "easeOut"
     }
   }
 };
@@ -56,7 +56,7 @@ export const fadeInRight: Variants = {
     x: 0,
     transition: {
       duration: 0.8,
-      ease: [0.25, 0.46, 0.45, 0.94]
+      ease: "easeOut"
     }
   }
 };
@@ -71,7 +71,7 @@ export const scaleIn: Variants = {
     scale: 1,
     transition: {
       duration: 0.6,
-      ease: [0.25, 0.46, 0.45, 0.94]
+      ease: "easeOut"
     }
   }
 };
@@ -151,7 +151,7 @@ export const hoverScale: Variants = {
     scale: 1.05,
     transition: {
       duration: 0.3,
-      ease: [0.25, 0.46, 0.45, 0.94]
+      ease: "easeOut"
     }
   }
 };
@@ -163,7 +163,7 @@ export const hoverLift: Variants = {
     boxShadow: "0 12px 24px rgba(0,0,0,0.15)",
     transition: {
       duration: 0.3,
-      ease: [0.25, 0.46, 0.45, 0.94]
+      ease: "easeOut"
     }
   }
 };
@@ -189,7 +189,7 @@ export const slideInFromTop: Variants = {
     y: 0,
     transition: {
       duration: 0.6,
-      ease: [0.25, 0.46, 0.45, 0.94]
+      ease: "easeOut"
     }
   }
 };
@@ -204,7 +204,7 @@ export const slideInFromBottom: Variants = {
     y: 0,
     transition: {
       duration: 0.6,
-      ease: [0.25, 0.46, 0.45, 0.94]
+      ease: "easeOut"
     }
   }
 };
@@ -222,7 +222,7 @@ export const textReveal: Variants = {
     skewY: 0,
     transition: {
       duration: 0.8,
-      ease: [0.25, 0.46, 0.45, 0.94]
+      ease: "easeOut"
     }
   }
 };
@@ -237,15 +237,13 @@ export const letterReveal: Variants = {
     y: 0,
     transition: {
       duration: 0.5,
-      ease: [0.25, 0.46, 0.45, 0.94]
+      ease: "easeOut"
     }
   }
 };
 
 // Transiciones de página
 export const pageTransition = {
-  type: "tween",
-  ease: [0.25, 0.46, 0.45, 0.94],
   duration: 0.6
 };
 
@@ -298,8 +296,7 @@ export const fadeInUpOptimized: Variants = {
     y: 0,
     transition: {
       duration: 0.6,
-      ease: [0.25, 0.46, 0.45, 0.94],
-      willChange: performanceConfig.willChange
+      ease: "easeOut"
     }
   }
 };
@@ -315,16 +312,15 @@ export const scaleInOptimized: Variants = {
     scale: 1,
     transition: {
       duration: 0.6,
-      ease: [0.25, 0.46, 0.45, 0.94],
-      willChange: performanceConfig.willChange
+      ease: "easeOut"
     }
   }
 };
 
 // Easings personalizados
 export const customEasing = {
-  smooth: [0.25, 0.46, 0.45, 0.94],
-  bounce: [0.68, -0.55, 0.265, 1.55],
-  elastic: [0.25, 0.46, 0.45, 0.94],
-  sharp: [0.4, 0, 0.2, 1]
+  smooth: "easeOut",
+  bounce: "easeInOut", 
+  elastic: "easeOut",
+  sharp: "easeInOut"
 };

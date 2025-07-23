@@ -145,7 +145,7 @@ const MenuCard = ({
     >
       {/* Price Badge */}
       <div className="absolute top-4 right-4 z-10">
-        <div className="bg-jade-700 text-white px-3 py-1 rounded-full font-bold text-lg shadow-warm">
+        <div className="bg-coral-600 text-white px-3 py-1 rounded-full font-bold text-lg shadow-warm">
           ${item.price}
         </div>
       </div>

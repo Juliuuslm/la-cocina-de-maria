@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 
 interface TypewriterTextProps {
   text: string;
@@ -64,7 +64,7 @@ export const AnimatedWords: React.FC<AnimatedWordsProps> = ({
 }) => {
   const words = text.split(' ');
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: {},
     visible: {
       transition: {
@@ -73,7 +73,7 @@ export const AnimatedWords: React.FC<AnimatedWordsProps> = ({
     }
   };
 
-  const wordVariants = {
+  const wordVariants: Variants = {
     hidden: { 
       opacity: 0, 
       y: 20,
@@ -84,8 +84,7 @@ export const AnimatedWords: React.FC<AnimatedWordsProps> = ({
       y: 0,
       filter: "blur(0px)",
       transition: {
-        duration: 0.6,
-        ease: [0.25, 0.46, 0.45, 0.94]
+        duration: 0.6
       }
     }
   };
@@ -124,7 +123,7 @@ export const AnimatedLetters: React.FC<AnimatedLettersProps> = ({
 }) => {
   const letters = text.split('');
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: {},
     visible: {
       transition: {
@@ -133,7 +132,7 @@ export const AnimatedLetters: React.FC<AnimatedLettersProps> = ({
     }
   };
 
-  const letterVariants = {
+  const letterVariants: Variants = {
     hidden: { 
       opacity: 0, 
       y: 50,
@@ -144,8 +143,7 @@ export const AnimatedLetters: React.FC<AnimatedLettersProps> = ({
       y: 0,
       rotateX: 0,
       transition: {
-        duration: 0.5,
-        ease: [0.25, 0.46, 0.45, 0.94]
+        duration: 0.5
       }
     }
   };

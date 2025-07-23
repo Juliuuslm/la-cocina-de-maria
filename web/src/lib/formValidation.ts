@@ -31,7 +31,7 @@ export const formValidation = {
     required: "Por favor seleccione un tipo de consulta"
   },
   date: {
-    validate: (value: string, formValues: any) => {
+    validate: (value: string | undefined, formValues: any) => {
       if (formValues.subject === 'reservations' && !value) {
         return "La fecha es requerida para reservaciones";
       }
@@ -47,7 +47,7 @@ export const formValidation = {
     }
   },
   guests: {
-    validate: (value: number, formValues: any) => {
+    validate: (value: number | undefined, formValues: any) => {
       if (formValues.subject === 'reservations') {
         if (!value || value < 1) {
           return "El número de personas es requerido para reservaciones";
