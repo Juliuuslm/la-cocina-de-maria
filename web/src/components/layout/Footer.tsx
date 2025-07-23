@@ -33,7 +33,7 @@ export const Footer: React.FC = () => {
               {/* CTA Button */}
               <a 
                 href="https://wa.me/5215512345678?text=Hola, me gustaría hacer una reservación"
-                className="inline-flex items-center bg-coral-600 hover:bg-coral-700 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
+                className="inline-flex items-center bg-pink-500 hover:bg-white text-white hover:text-black px-6 py-3 rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-xl border border-pink-500 hover:border-black"
               >
                 Reservar Mesa →
               </a>
@@ -150,28 +150,28 @@ export const Footer: React.FC = () => {
             <div className="flex justify-center md:justify-end space-x-4">
               <a 
                 href="#" 
-                className="w-8 h-8 bg-jade-800 hover:bg-jade-900 text-white rounded-full flex items-center justify-center transition-colors duration-300"
+                className="w-8 h-8 bg-pink-500 hover:bg-pink-600 text-white rounded-full flex items-center justify-center transition-colors duration-300"
                 title="Facebook"
               >
                 <Facebook className="w-4 h-4" />
               </a>
               <a 
                 href="#" 
-                className="w-8 h-8 bg-jade-800 hover:bg-jade-900 text-white rounded-full flex items-center justify-center transition-colors duration-300"
+                className="w-8 h-8 bg-pink-500 hover:bg-pink-600 text-white rounded-full flex items-center justify-center transition-colors duration-300"
                 title="Twitter"
               >
                 <Twitter className="w-4 h-4" />
               </a>
               <a 
                 href="#" 
-                className="w-8 h-8 bg-jade-800 hover:bg-jade-900 text-white rounded-full flex items-center justify-center transition-colors duration-300"
+                className="w-8 h-8 bg-pink-500 hover:bg-pink-600 text-white rounded-full flex items-center justify-center transition-colors duration-300"
                 title="Instagram"
               >
                 <Instagram className="w-4 h-4" />
               </a>
               <a 
                 href="https://wa.me/5215512345678" 
-                className="w-8 h-8 bg-jade-800 hover:bg-jade-900 text-white rounded-full flex items-center justify-center transition-colors duration-300"
+                className="w-8 h-8 bg-pink-500 hover:bg-pink-600 text-white rounded-full flex items-center justify-center transition-colors duration-300"
                 title="WhatsApp"
               >
                 <MessageCircle className="w-4 h-4" />

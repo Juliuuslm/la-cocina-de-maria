@@ -1,8 +1,8 @@
 "use client";
 
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Star, Quote, Users, Award, Heart, TrendingUp } from 'lucide-react';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Star, Quote, Users, Award, Heart, TrendingUp, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Card } from '@/components/ui/Card';
 import { 
   fadeInUp, 
@@ -62,6 +62,42 @@ const testimonials: Testimonial[] = [
     rating: 5,
     avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
     date: "Hace 1 mes"
+  },
+  {
+    id: 5,
+    name: "Ana Patricia López",
+    location: "Oaxaca",
+    text: "El pozole rojo es exactamente como lo hace mi abuela. Los chiles bien molidos y el maíz cacahuazintle perfecto.",
+    rating: 5,
+    avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face",
+    date: "Hace 5 días"
+  },
+  {
+    id: 6,
+    name: "Diego García",
+    location: "Veracruz",
+    text: "Las aguas frescas son increíbles, especialmente la de jamaica. Te transporta a los mercados tradicionales.",
+    rating: 4,
+    avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face",
+    date: "Hace 2 semanas"
+  },
+  {
+    id: 7,
+    name: "Sofía Mendoza",
+    location: "Mérida",
+    text: "Los postres tradicionales son una delicia. El flan napolitano y los churros con cajeta están buenísimos.",
+    rating: 5,
+    avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop&crop=face",
+    date: "Hace 4 días"
+  },
+  {
+    id: 8,
+    name: "Alejandro Herrera",
+    location: "Tijuana",
+    text: "La atención es excepcional y el ambiente muy familiar. Se siente como estar en casa de la abuela.",
+    rating: 5,
+    avatar: "https://images.unsplash.com/photo-1507591064344-4c6ce005b128?w=150&h=150&fit=crop&crop=face",
+    date: "Hace 1 semana"
   }
 ];
 
@@ -113,72 +149,47 @@ const StarRating = ({ rating }: { rating: number }) => (
 
 const TestimonialCard = ({ testimonial, index }: { testimonial: Testimonial, index: number }) => (
   <motion.div
-    variants={fadeInUp}
-    initial="hidden"
-    whileInView="visible"
-    viewport={viewportConfig}
-    whileHover="hover"
+    initial={{ opacity: 0, y: 20 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.5, delay: index * 0.1 }}
   >
-    <motion.div variants={hoverScale}>
-      <Card variant="feature" className="h-full bg-amber-50 border-2 border-yellow-600 p-6 cursor-pointer">
-        <motion.div 
-          variants={staggerContainer}
-          initial="hidden"
-          whileInView="visible"
-          viewport={viewportConfig}
-          className="flex flex-col h-full"
-        >
+    <Card variant="feature" className="h-full bg-amber-50 border-2 border-yellow-600 p-6">
+        <div className="flex flex-col h-full">
           {/* Quote Icon */}
-          <motion.div variants={scaleIn}>
+          <div>
             <Quote className="w-8 h-8 text-coral-400/40 mb-4" />
-          </motion.div>
+          </div>
           
           {/* Testimonial Text */}
-          <motion.blockquote 
-            variants={textReveal}
-            className="text-black leading-relaxed mb-6 flex-1 italic"
-          >
+          <blockquote className="text-black leading-relaxed mb-6 flex-1 italic">
             "{testimonial.text}"
-          </motion.blockquote>
+          </blockquote>
           
           {/* Rating */}
-          <motion.div variants={fadeInUp} className="mb-4">
+          <div className="mb-4">
             <StarRating rating={testimonial.rating} />
-          </motion.div>
+          </div>
           
           {/* Author Info */}
-          <motion.div 
-            variants={fadeInLeft}
-            className="flex items-center space-x-3"
-          >
-            <motion.div 
-              variants={scaleIn}
-              className="w-12 h-12 rounded-full overflow-hidden border-2 border-coral-500/30"
-            >
+          <div className="flex items-center space-x-3">
+            <div className="flex-shrink-0 w-12 h-12 rounded-full overflow-hidden border-2 border-coral-500/30">
               <img
                 src={testimonial.avatar}
                 alt={testimonial.name}
                 className="w-full h-full object-cover"
               />
-            </motion.div>
-            <div>
-              <motion.h4 
-                variants={textReveal}
-                className="font-serif font-bold text-black"
-              >
-                {testimonial.name}
-              </motion.h4>
-              <motion.p 
-                variants={fadeInUp}
-                className="text-coral-600 text-sm"
-              >
-                {testimonial.location}
-              </motion.p>
             </div>
-          </motion.div>
-        </motion.div>
+            <div>
+              <h4 className="font-serif font-bold text-black">
+                {testimonial.name}
+              </h4>
+              <p className="text-coral-600 text-sm">
+                {testimonial.location}
+              </p>
+            </div>
+          </div>
+        </div>
       </Card>
-    </motion.div>
   </motion.div>
 );
 
@@ -191,37 +202,50 @@ const StatCard = ({ stat }: { stat: typeof statistics[0] }) => {
       initial="hidden"
       whileInView="visible"
       viewport={viewportConfig}
-      whileHover="hover"
     >
-      <motion.div variants={hoverScale}>
-        <Card variant="feature" className="text-center h-full bg-amber-50 border-2 border-yellow-600 flex items-center justify-center cursor-pointer">
-          <motion.div
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={viewportConfig}
+      <Card variant="feature" className="text-center h-full bg-amber-50 border-2 border-yellow-600 flex items-center justify-center">
+        <motion.div
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportConfig}
+        >
+          <motion.div 
+            ref={ref}
+            variants={textReveal}
+            className="text-5xl font-serif font-bold text-black mb-3"
           >
-            <motion.div 
-              ref={ref}
-              variants={textReveal}
-              className="text-5xl font-serif font-bold text-black mb-3"
-            >
-              {animatedValue}
-            </motion.div>
-            <motion.p 
-              variants={fadeInUp}
-              className="text-lg text-black font-medium"
-            >
-              {stat.label}
-            </motion.p>
+            {animatedValue}
           </motion.div>
-        </Card>
-      </motion.div>
+          <motion.p 
+            variants={fadeInUp}
+            className="text-lg text-black font-medium"
+          >
+            {stat.label}
+          </motion.p>
+        </motion.div>
+      </Card>
     </motion.div>
   );
 };
 
 export const Testimonials: React.FC = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const testimonialsPerPage = 4;
+  const totalPages = Math.ceil(testimonials.length / testimonialsPerPage);
+
+  const nextSlide = () => {
+    setCurrentIndex((prev) => (prev + 1) % totalPages);
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prev) => (prev - 1 + totalPages) % totalPages);
+  };
+
+  const getCurrentTestimonials = () => {
+    const start = currentIndex * testimonialsPerPage;
+    return testimonials.slice(start, start + testimonialsPerPage);
+  };
 
   return (
     <section id="testimonials" className="py-[75px] relative">
@@ -264,18 +288,64 @@ export const Testimonials: React.FC = () => {
           </motion.p>
         </motion.div>
 
-        {/* Testimonials Grid */}
-        <motion.div 
-          variants={staggerContainer}
-          initial="hidden"
-          whileInView="visible"
-          viewport={viewportConfig}
-          className="grid md:grid-cols-2 gap-8 mb-16"
-        >
-          {testimonials.slice(0, 4).map((testimonial, index) => (
-            <TestimonialCard key={testimonial.id} testimonial={testimonial} index={index} />
-          ))}
-        </motion.div>
+        {/* Testimonials Carousel */}
+        <div className="relative mb-16">
+          {/* Navigation Buttons */}
+          <div className="flex justify-center gap-4 mb-8">
+            <motion.button
+              onClick={prevSlide}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="flex items-center justify-center w-12 h-12 bg-pink-500 hover:bg-pink-600 text-white rounded-full shadow-lg transition-colors duration-300"
+              disabled={currentIndex === 0}
+            >
+              <ChevronLeft className="w-6 h-6" />
+            </motion.button>
+            
+            <motion.button
+              onClick={nextSlide}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="flex items-center justify-center w-12 h-12 bg-pink-500 hover:bg-pink-600 text-white rounded-full shadow-lg transition-colors duration-300"
+              disabled={currentIndex === totalPages - 1}
+            >
+              <ChevronRight className="w-6 h-6" />
+            </motion.button>
+          </div>
+
+          {/* Testimonials Grid with Animation */}
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={currentIndex}
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -50 }}
+              transition={{ duration: 0.5 }}
+              className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
+            >
+              {getCurrentTestimonials().map((testimonial, index) => (
+                <TestimonialCard key={testimonial.id} testimonial={testimonial} index={index} />
+              ))}
+            </motion.div>
+          </AnimatePresence>
+
+          {/* Pagination Dots */}
+          <div className="flex justify-center gap-2 mt-8">
+            {Array.from({ length: totalPages }, (_, index) => (
+              <motion.button
+                key={index}
+                onClick={() => setCurrentIndex(index)}
+                whileHover={{ scale: 1.2 }}
+                whileTap={{ scale: 0.9 }}
+                className={`w-3 h-3 rounded-full transition-colors duration-300 ${
+                  currentIndex === index 
+                    ? 'bg-pink-500' 
+                    : 'bg-gray-300 hover:bg-gray-400'
+                }`}
+              />
+            ))}
+          </div>
+        </div>
 
         {/* Statistics Cards */}
         <motion.div

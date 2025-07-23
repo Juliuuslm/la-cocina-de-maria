@@ -63,8 +63,6 @@ const HeroFeature = ({ title, description, delay }: {
 };
 
 export const Hero: React.FC = () => {
-  const { ref: parallaxRef, y: parallaxY } = useParallax({ speed: 0.3 });
-  const { ref: rotateRef, rotate } = useParallaxRotate(0.2);
   
   const handleReservation = () => {
     const whatsappUrl = getWhatsAppUrl(RESTAURANT_INFO.whatsapp, DEFAULT_WHATSAPP_MESSAGE);
@@ -290,23 +288,7 @@ export const Hero: React.FC = () => {
               </motion.div>
             </div>
 
-            {/* Background Decorative Circle with Parallax */}
-            <motion.div 
-              ref={parallaxRef}
-              variants={scaleIn}
-              initial="hidden"
-              animate="visible"
-              transition={{ delay: 0.8 }}
-              style={{ y: parallaxY }}
-              className="absolute -top-8 -right-8 w-64 h-64 bg-coral-200 rounded-full opacity-25 -z-10"
-            ></motion.div>
             
-            {/* Additional Decorative Elements */}
-            <motion.div
-              ref={rotateRef}
-              style={{ rotate }}
-              className="absolute -bottom-12 -left-12 w-32 h-32 border-2 border-gold-300/30 rounded-full -z-10"
-            ></motion.div>
           </motion.div>
         </div>
 

@@ -35,10 +35,10 @@ export const Header: React.FC = () => {
   };
 
   const navItems = [
-    { href: '#menu', label: 'Menú' },
     { href: '#about', label: 'Nosotros' },
-    { href: '#chefs', label: 'Chefs' },
+    { href: '#menu', label: 'Menú' },
     { href: '#testimonials', label: 'Testimonios' },
+    { href: '#chefs', label: 'Chefs' },
   ];
 
   const handleReservation = () => {
@@ -137,7 +137,7 @@ export const Header: React.FC = () => {
                   onClick={handleReservation}
                   variant="primary"
                   size="sm"
-                  className="hidden md:flex bg-white hover:bg-pink-500 text-black hover:text-white font-bold px-6 py-2 shadow-warm-lg hover:shadow-xl transition-all duration-300 border border-white hover:border-pink-500"
+                  className="hidden md:flex bg-pink-500 hover:bg-white text-white hover:text-black font-bold px-6 py-2 shadow-warm-lg hover:shadow-xl transition-all duration-300 border border-pink-500 hover:border-black"
                 >
                   Reservar Mesa
                 </Button>
@@ -224,7 +224,7 @@ export const Header: React.FC = () => {
                         onClick={handleReservation}
                         variant="primary"
                         size="sm"
-                        className="w-full bg-white hover:bg-pink-500 text-black hover:text-white font-bold border border-white hover:border-pink-500 transition-all duration-300"
+                        className="w-full bg-pink-500 hover:bg-white text-white hover:text-black font-bold border border-pink-500 hover:border-black transition-all duration-300"
                       >
                         Reservar Mesa
                       </Button>
@@ -238,7 +238,7 @@ export const Header: React.FC = () => {
       </div>
 
       {/* Mexican Decorative Border */}
-      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-coral-500 via-pink-500 to-coral-500 opacity-60"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-1 bg-coral-500 opacity-60"></div>
     </motion.header>
   );
 };
