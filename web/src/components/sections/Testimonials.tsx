@@ -248,7 +248,7 @@ export const Testimonials: React.FC = () => {
   };
 
   return (
-    <section id="testimonials" className="py-[75px] relative">
+    <section id="testimonials" className="py-12 sm:py-16 lg:py-[75px] relative">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <motion.div
@@ -276,7 +276,7 @@ export const Testimonials: React.FC = () => {
           
           <motion.h2 
             variants={textReveal}
-            className="text-[72px] font-serif font-medium mb-4 relative z-10"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[76px] font-serif font-medium mb-4 relative z-10"
           >
             <span className="text-jade-800">Lo que dicen</span> <span className="text-pink-500">nuestros clientes</span>
           </motion.h2>
@@ -296,7 +296,7 @@ export const Testimonials: React.FC = () => {
               onClick={prevSlide}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="flex items-center justify-center w-12 h-12 bg-pink-500 hover:bg-pink-600 text-white rounded-full shadow-lg transition-colors duration-300"
+              className="flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 bg-pink-500 hover:bg-pink-600 text-white rounded-full shadow-lg transition-colors duration-300"
               disabled={currentIndex === 0}
             >
               <ChevronLeft className="w-6 h-6" />
@@ -306,7 +306,7 @@ export const Testimonials: React.FC = () => {
               onClick={nextSlide}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="flex items-center justify-center w-12 h-12 bg-pink-500 hover:bg-pink-600 text-white rounded-full shadow-lg transition-colors duration-300"
+              className="flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 bg-pink-500 hover:bg-pink-600 text-white rounded-full shadow-lg transition-colors duration-300"
               disabled={currentIndex === totalPages - 1}
             >
               <ChevronRight className="w-6 h-6" />
@@ -321,7 +321,7 @@ export const Testimonials: React.FC = () => {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -50 }}
               transition={{ duration: 0.5 }}
-              className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8"
             >
               {getCurrentTestimonials().map((testimonial, index) => (
                 <TestimonialCard key={testimonial.id} testimonial={testimonial} index={index} />

@@ -47,7 +47,7 @@ const HeroFeature = ({ title, description, delay }: {
       >
         <motion.h3 
           variants={textReveal}
-          className={`text-3xl font-serif font-extrabold ${colors.titleText} mb-6`}
+          className={`text-xl sm:text-2xl lg:text-3xl font-serif font-extrabold ${colors.titleText} mb-4 sm:mb-6`}
         >
           {title}
         </motion.h3>
@@ -70,16 +70,16 @@ export const Hero: React.FC = () => {
   };
 
   return (
-    <section className="relative min-h-screen pt-20">
-      <div className="container mx-auto px-4 py-[75px]">
-        <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
+    <section id="hero" className="relative min-h-screen pt-20">
+      <div className="container mx-auto px-4 py-12 sm:py-16 lg:py-[75px]">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[80vh]">
           
           {/* Content Left */}
           <motion.div
             variants={staggerContainer}
             initial="hidden"
             animate="visible"
-            className="space-y-8"
+            className="space-y-8 text-center lg:text-left"
           >
 
             {/* Welcome Text */}
@@ -95,7 +95,7 @@ export const Hero: React.FC = () => {
               </motion.p>
               <motion.h1 
                 variants={textReveal}
-                className="text-[128px] font-serif font-semibold text-jade-800 leading-[100%] relative z-10"
+                className="text-6xl sm:text-7xl md:text-8xl lg:text-7xl xl:text-[128px] font-serif font-semibold text-jade-800 leading-[100%] relative z-10"
               >
                 La Cocina <br />
                 <motion.span 
@@ -128,10 +128,9 @@ export const Hero: React.FC = () => {
               </motion.div>
               <motion.p 
                 variants={textReveal}
-                className="text-base lg:text-lg text-jade-700 leading-relaxed max-w-lg font-semibold bg-cream-50/85 backdrop-blur-sm p-4 rounded-xl"
+                className="text-sm sm:text-base lg:text-lg text-jade-700 leading-relaxed max-w-lg font-semibold bg-cream-50/85 backdrop-blur-sm p-3 sm:p-4 rounded-xl"
               >
-                Disfruta de auténtica comida casera mexicana preparada con recetas ancestrales 
-                e ingredientes frescos en el corazón de Roma Norte.
+                Disfruta de auténtica comida casera mexicana preparada con recetas ancestrales e ingredientes frescos en el corazón de Roma Norte.
               </motion.p>
             </motion.div>
 
@@ -181,7 +180,7 @@ export const Hero: React.FC = () => {
                   <Button 
                     size="lg" 
                     onClick={handleReservation}
-                    className="group w-full sm:w-auto"
+                    className="group w-full sm:w-auto min-h-12 sm:min-h-14 px-6 py-3"
                   >
                     <Phone className="w-5 h-5 mr-2 group-hover:animate-pulse" />
                     Hacer Reservación
@@ -198,7 +197,7 @@ export const Hero: React.FC = () => {
                     variant="outline" 
                     size="lg"
                     onClick={() => document.getElementById('menu')?.scrollIntoView({ behavior: 'smooth' })}
-                    className="w-full sm:w-auto"
+                    className="w-full sm:w-auto min-h-12 sm:min-h-14 px-6 py-3"
                   >
                     Ver Menú
                   </Button>
@@ -227,7 +226,7 @@ export const Hero: React.FC = () => {
                 animate={{ rotate: 2 }}
               >
                 <motion.div 
-                  className="w-full h-[32rem] lg:h-[36rem] xl:h-[42rem] rounded-2xl flex items-center justify-center relative overflow-hidden"
+                  className="w-full h-64 sm:h-80 md:h-96 lg:h-[36rem] xl:h-[42rem] rounded-2xl flex items-center justify-center relative overflow-hidden"
                   whileHover={{ scale: 1.05 }}
                   transition={{ duration: 0.3 }}
                 >

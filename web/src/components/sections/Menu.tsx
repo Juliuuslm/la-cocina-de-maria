@@ -200,7 +200,7 @@ export const Menu: React.FC = () => {
   };
 
   return (
-    <section id="menu" className="py-[75px] relative">
+    <section id="menu" className="py-12 sm:py-16 lg:py-[75px] relative">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <motion.div
@@ -224,7 +224,7 @@ export const Menu: React.FC = () => {
             <div className="h-px bg-gold-400 flex-1 max-w-32"></div>
           </motion.div>
           
-          <h2 className="text-[72px] font-serif font-medium mb-4 relative z-10">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[76px] font-serif font-medium mb-4 relative z-10">
             <span className="text-jade-800">Nuestros</span> <span className="text-pink-500">Platillos</span>
           </h2>
           <p className="text-base text-jade-600 max-w-2xl mx-auto font-normal relative z-10">
@@ -233,7 +233,7 @@ export const Menu: React.FC = () => {
         </motion.div>
 
         {/* Main Content */}
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-start">
           
           {/* Photo Gallery - Left Side */}
           <div className="lg:sticky lg:top-24">
@@ -242,7 +242,7 @@ export const Menu: React.FC = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="space-y-6 flex flex-col min-h-[600px]"
+              className="space-y-4 sm:space-y-6 flex flex-col min-h-80 sm:min-h-96 lg:min-h-[600px]"
             >
             <div className="text-center lg:text-left mb-6">
               <h3 className="text-2xl font-serif font-bold text-jade-800 mb-2">
@@ -267,7 +267,7 @@ export const Menu: React.FC = () => {
                   <img
                     src={selectedItem.image}
                     alt={selectedItem.name}
-                    className="w-full h-auto max-h-[650px] min-h-[500px] object-contain"
+                    className="w-full h-auto max-h-64 sm:max-h-80 md:max-h-96 lg:max-h-[650px] min-h-48 sm:min-h-64 lg:min-h-[500px] object-contain"
                   />
                 
                 {/* Selection indicator */}

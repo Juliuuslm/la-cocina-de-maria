@@ -55,7 +55,7 @@ export const ContactInfo: React.FC = () => {
             <div className="h-px bg-gold-400 flex-1 max-w-32"></div>
           </motion.div>
           
-          <h2 className="text-[72px] font-serif font-medium mb-4 relative z-10">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[76px] font-serif font-medium mb-4 relative z-10">
             <span className="text-jade-800">Información</span> <span className="text-pink-500">y Contacto</span>
           </h2>
           <p className="text-base text-jade-600 max-w-2xl mx-auto font-normal relative z-10">
