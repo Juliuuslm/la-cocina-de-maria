@@ -1,0 +1,84 @@
+{
+  "testimonials": [
+    {
+      "id": "testimonial-1",
+      "name": "Ana Patricia Morales",
+      "rating": 5,
+      "comment": "¡Increíble! El mole poblano es exactamente como el que hacía mi abuela. María y su equipo realmente conservan la tradición mexicana. El ambiente familiar te hace sentir como en casa.",
+      "date": "2024-12-15",
+      "avatar": "/images/testimonials/ana-morales.jpg"
+    },
+    {
+      "id": "testimonial-2", 
+      "name": "Carlos Mendez",
+      "rating": 5,
+      "comment": "Vengo aquí desde que abrieron hace 8 años. La calidad nunca ha bajado y los precios son muy justos. Los chiles rellenos están buenísimos y el servicio siempre es excelente.",
+      "date": "2024-12-10",
+      "avatar": "/images/testimonials/carlos-mendez.jpg"
+    },
+    {
+      "id": "testimonial-3",
+      "name": "Sofía Hernández",
+      "rating": 5,
+      "comment": "Perfecto para ir en familia. Mis hijos aman las quesadillas y yo no me canso de la cochinita pibil. Además, María siempre nos recibe con una sonrisa genuina.",
+      "date": "2024-12-08",
+      "avatar": "/images/testimonials/sofia-hernandez.jpg"
+    },
+    {
+      "id": "testimonial-4",
+      "name": "Roberto Silva",
+      "rating": 4,
+      "comment": "La comida corrida tiene una excelente relación calidad-precio. Incluye entrada, plato fuerte, postre y bebida. Ideal para el almuerzo de oficina en Roma Norte.",
+      "date": "2024-12-05",
+      "avatar": "/images/testimonials/roberto-silva.jpg"
+    },
+    {
+      "id": "testimonial-5",
+      "name": "Laura Jiménez",
+      "rating": 5,
+      "comment": "Soy vegetariana y siempre encuentro opciones deliciosas. Las quesadillas de flor de calabaza y los chiles rellenos de queso son mis favoritos. ¡Altamente recomendado!",
+      "date": "2024-12-01",
+      "avatar": "/images/testimonials/laura-jimenez.jpg"
+    },
+    {
+      "id": "testimonial-6",
+      "name": "Miguel Ángel Torres",
+      "rating": 5,
+      "comment": "El mejor pozole rojo de la Roma Norte. Viene bien servido y con todos los acompañamientos tradicionales. El café de olla también está espectacular.",
+      "date": "2024-11-28",
+      "avatar": "/images/testimonials/miguel-torres.jpg"
+    },
+    {
+      "id": "testimonial-7",
+      "name": "Carmen Delgado",
+      "rating": 4,
+      "comment": "Organizamos el cumpleaños de mi mamá aquí y el servicio de banquetes fue impecable. La comida estuvo deliciosa y se adaptaron a todas nuestras necesidades especiales.",
+      "date": "2024-11-25",
+      "avatar": "/images/testimonials/carmen-delgado.jpg"
+    },
+    {
+      "id": "testimonial-8",
+      "name": "Jorge Ramírez",
+      "rating": 5,
+      "comment": "Como chef, puedo decir que aquí se respetan las recetas tradicionales. Los sabores son auténticos y se nota el amor con el que preparan cada platillo.",
+      "date": "2024-11-20",
+      "avatar": "/images/testimonials/jorge-ramirez.jpg"
+    },
+    {
+      "id": "testimonial-9",
+      "name": "Mónica García",
+      "rating": 5,
+      "comment": "Los desayunos son increíbles. Los huevos rancheros y los chilaquiles verdes están preparados perfectamente. Definitivamente mi lugar favorito para desayunar.",
+      "date": "2024-11-18",
+      "avatar": "/images/testimonials/monica-garcia.jpg"
+    },
+    {
+      "id": "testimonial-10",
+      "name": "Alejandro Vázquez",
+      "rating": 4,
+      "comment": "Excelente ubicación en Roma Norte, fácil de llegar y con estacionamiento cerca. La cochinita pibil es su especialidad y realmente vale la pena probarla.",
+      "date": "2024-11-15",
+      "avatar": "/images/testimonials/alejandro-vazquez.jpg"
+    }
+  ]
+}

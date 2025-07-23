@@ -1,0 +1,188 @@
+{
+  "categories": [
+    {
+      "id": "desayunos",
+      "name": "Desayunos Tradicionales",
+      "description": "Deliciosos desayunos mexicanos para empezar el día",
+      "items": [
+        {
+          "id": "huevos-rancheros",
+          "name": "Huevos Rancheros",
+          "description": "Huevos estrellados sobre tortilla con salsa roja, frijoles refritos y aguacate",
+          "price": 120,
+          "isSpecialty": true
+        },
+        {
+          "id": "chilaquiles-verdes",
+          "name": "Chilaquiles Verdes",
+          "description": "Totopos bañados en salsa verde con queso, crema y cebolla, opción con pollo",
+          "price": 140
+        },
+        {
+          "id": "quesadillas-flor",
+          "name": "Quesadillas de Flor de Calabaza",
+          "description": "Tortillas hechas a mano rellenas de flor de calabaza y queso Oaxaca",
+          "price": 110
+        },
+        {
+          "id": "molletes",
+          "name": "Molletes Tradicionales",
+          "description": "Pan bolillo con frijoles refritos, queso derretido y pico de gallo",
+          "price": 95
+        }
+      ]
+    },
+    {
+      "id": "especialidades",
+      "name": "Especialidades de la Casa",
+      "description": "Nuestros platillos más representativos con recetas familiares",
+      "items": [
+        {
+          "id": "mole-poblano",
+          "name": "Mole Poblano",
+          "description": "Pollo en salsa de mole con más de 20 ingredientes, acompañado de arroz mexicano",
+          "price": 280,
+          "isSpecialty": true
+        },
+        {
+          "id": "chiles-rellenos",
+          "name": "Chiles Rellenos",
+          "description": "Chiles poblanos rellenos de queso, capeados y bañados en salsa de jitomate",
+          "price": 220,
+          "isSpecialty": true
+        },
+        {
+          "id": "cochinita-pibil",
+          "name": "Cochinita Pibil",
+          "description": "Cerdo marinado en achiote, cocido en hoja de plátano, con cebolla morada",
+          "price": 250,
+          "isSpecialty": true
+        },
+        {
+          "id": "pozole-rojo",
+          "name": "Pozole Rojo",
+          "description": "Caldo de maíz pozolero con carne de cerdo, chile guajillo y acompañamientos",
+          "price": 180
+        }
+      ]
+    },
+    {
+      "id": "comidas-corridas",
+      "name": "Comidas Corridas",
+      "description": "Menú completo con entrada, plato fuerte, postre y agua fresca",
+      "items": [
+        {
+          "id": "corrida-lunes",
+          "name": "Comida Corrida Lunes",
+          "description": "Sopa de tortilla, milanesa de pollo, arroz, frijoles, tortillas y agua del día",
+          "price": 150
+        },
+        {
+          "id": "corrida-martes",
+          "name": "Comida Corrida Martes",
+          "description": "Consomé de pollo, carne guisada, arroz, frijoles, tortillas y agua del día",
+          "price": 150
+        },
+        {
+          "id": "corrida-miercoles",
+          "name": "Comida Corrida Miércoles",
+          "description": "Crema de elote, pollo en salsa verde, arroz, frijoles, tortillas y agua del día",
+          "price": 150
+        }
+      ]
+    },
+    {
+      "id": "platillos-carta",
+      "name": "Platillos a la Carta",
+      "description": "Variedad de platillos tradicionales mexicanos",
+      "items": [
+        {
+          "id": "enchiladas-verdes",
+          "name": "Enchiladas Verdes",
+          "description": "Tortillas rellenas de pollo bañadas en salsa verde con queso y crema",
+          "price": 160
+        },
+        {
+          "id": "tacos-pastor",
+          "name": "Tacos al Pastor",
+          "description": "Orden de 4 tacos de trompo con piña, cebolla y cilantro",
+          "price": 120
+        },
+        {
+          "id": "sopes-tradicionales",
+          "name": "Sopes Tradicionales",
+          "description": "Orden de 3 sopes con frijoles, carne al gusto, lechuga, queso y crema",
+          "price": 140
+        },
+        {
+          "id": "flautas-pollo",
+          "name": "Flautas de Pollo",
+          "description": "Orden de 4 flautas doradas acompañadas de guacamole y salsa",
+          "price": 130
+        }
+      ]
+    },
+    {
+      "id": "bebidas",
+      "name": "Bebidas Tradicionales",
+      "description": "Aguas frescas y bebidas mexicanas preparadas diariamente",
+      "items": [
+        {
+          "id": "agua-horchata",
+          "name": "Agua de Horchata",
+          "description": "Refrescante bebida de arroz con canela y vainilla",
+          "price": 45
+        },
+        {
+          "id": "agua-jamaica",
+          "name": "Agua de Jamaica",
+          "description": "Infusión fría de flor de jamaica endulzada naturalmente",
+          "price": 40
+        },
+        {
+          "id": "agua-tamarindo",
+          "name": "Agua de Tamarindo",
+          "description": "Bebida refrescante de tamarindo con el toque perfecto de dulce",
+          "price": 40
+        },
+        {
+          "id": "cafe-olla",
+          "name": "Café de Olla",
+          "description": "Café tradicional preparado con canela y piloncillo",
+          "price": 35
+        }
+      ]
+    },
+    {
+      "id": "postres",
+      "name": "Postres Caseros",
+      "description": "Dulces tradicionales hechos en casa con recetas familiares",
+      "items": [
+        {
+          "id": "flan-napolitano",
+          "name": "Flan Napolitano",
+          "description": "Postre cremoso de vainilla con caramelo, hecho con leche fresca",
+          "price": 65
+        },
+        {
+          "id": "tres-leches",
+          "name": "Pastel Tres Leches",
+          "description": "Bizcocho empapado en tres tipos de leche con canela",
+          "price": 70
+        },
+        {
+          "id": "arroz-leche",
+          "name": "Arroz con Leche",
+          "description": "Postre tradicional de arroz cocido en leche con canela y pasas",
+          "price": 55
+        },
+        {
+          "id": "gelatina-leche",
+          "name": "Gelatina de Leche",
+          "description": "Gelatina cremosa de leche condensada con frutas de temporada",
+          "price": 50
+        }
+      ]
+    }
+  ]
+}

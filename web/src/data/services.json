@@ -1,0 +1,88 @@
+{
+  "services": [
+    {
+      "id": "comida-corrida",
+      "name": "Comida Corrida",
+      "description": "Menú completo diario con entrada, plato fuerte, postre y agua fresca a precio accesible",
+      "icon": "utensils",
+      "features": [
+        "Menú diferente cada día",
+        "Incluye entrada, plato fuerte y postre",
+        "Agua fresca del día incluida",
+        "Precio accesible y fijo",
+        "Servicio de lunes a viernes",
+        "Porciones generosas"
+      ]
+    },
+    {
+      "id": "eventos-banquetes",
+      "name": "Eventos y Banquetes",
+      "description": "Organizamos tus celebraciones especiales con menús personalizados y servicio completo",
+      "icon": "party-popper",
+      "features": [
+        "Menús personalizados",
+        "Servicio para hasta 50 personas",
+        "Decoración básica incluida",
+        "Opciones vegetarianas disponibles",
+        "Servicio de meseros profesional",
+        "Precios especiales por volumen"
+      ]
+    },
+    {
+      "id": "take-away",
+      "name": "Para Llevar",
+      "description": "Disfruta nuestros platillos favoritos en la comodidad de tu hogar u oficina",
+      "icon": "package",
+      "features": [
+        "Menú completo disponible",
+        "Empaques ecológicos",
+        "Tiempo de preparación rápido",
+        "Órdenes por teléfono o WhatsApp",
+        "Horario extendido",
+        "Descuentos por volumen"
+      ]
+    },
+    {
+      "id": "delivery",
+      "name": "Servicio a Domicilio",
+      "description": "Llevamos nuestros sabores tradicionales directamente a tu puerta en Roma Norte",
+      "icon": "truck",
+      "features": [
+        "Cobertura en Roma Norte y colonias aledañas",
+        "Tiempo promedio de entrega: 30-45 min",
+        "Pedido mínimo: $200 MXN",
+        "Costo de envío: $30 MXN",
+        "Rastreo del pedido por WhatsApp",
+        "Garantía de calidad y temperatura"
+      ]
+    },
+    {
+      "id": "catering",
+      "name": "Servicio de Catering",
+      "description": "Catering profesional para empresas, oficinas y eventos corporativos",
+      "icon": "chef-hat",
+      "features": [
+        "Menús corporativos especializados",
+        "Servicio para grupos grandes",
+        "Entregas puntuales garantizadas",
+        "Facturación empresarial",
+        "Planes de alimentación semanal/mensual",
+        "Atención personalizada de cuenta"
+      ]
+    },
+    {
+      "id": "reservaciones",
+      "name": "Sistema de Reservas",
+      "description": "Garantiza tu mesa en nuestro acogedor restaurante familiar",
+      "icon": "calendar",
+      "features": [
+        "Reservas por teléfono, WhatsApp o presencial",
+        "Confirmación inmediata",
+        "Mesas para 2 hasta 12 personas",
+        "Espacios especiales para niños",
+        "Flexibilidad en horarios",
+        "Sin costo adicional por reserva"
+      ]
+    }
+  ]
+}
