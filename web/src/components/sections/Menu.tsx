@@ -143,12 +143,6 @@ const MenuCard = ({
           : 'border-black hover:border-yellow-600'
       }`}
     >
-      {/* Price Badge */}
-      <div className="absolute top-4 right-4 z-10">
-        <div className="bg-coral-600 text-white px-3 py-1 rounded-full font-bold text-lg shadow-warm">
-          ${item.price}
-        </div>
-      </div>
       
       <div className="flex items-start space-x-4">
         {/* Dish Image */}
@@ -164,10 +158,10 @@ const MenuCard = ({
         
         {/* Content */}
         <div className="flex-1 pt-2">
-          <h3 className="text-xl font-serif font-bold text-black mb-2">
+          <h3 className="text-xl font-serif font-bold text-gray-900 mb-2">
             {item.name}
           </h3>
-          <p className="text-black leading-relaxed text-sm">
+          <p className="text-gray-800 leading-relaxed text-sm">
             {item.description}
           </p>
         </div>

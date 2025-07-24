@@ -16,8 +16,14 @@ export const metadata: Metadata = {
   title: "La Cocina de María",
   description: "Auténtica comida casera mexicana preparada con recetas ancestrales e ingredientes frescos en Roma Norte, CDMX",
   icons: {
-    icon: '/favicon.ico',
+    icon: [
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon.ico', sizes: '32x32' }
+    ],
+    apple: '/apple-touch-icon.png',
   },
+  manifest: '/site.webmanifest',
 };
 
 export default function RootLayout({

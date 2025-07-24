@@ -1,0 +1,22 @@
+{
+  "name": "La Cocina de María",
+  "short_name": "La Cocina de María",
+  "description": "Auténtica comida casera mexicana preparada con recetas ancestrales e ingredientes frescos en Roma Norte, CDMX",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#D97706",
+  "background_color": "#FEF3C7",
+  "display": "standalone",
+  "start_url": "/",
+  "scope": "/"
+}

@@ -152,7 +152,7 @@ export const ContactForm: React.FC = () => {
           
           <motion.h2 
             variants={textReveal}
-            className="text-[72px] font-serif font-medium mb-4 relative z-10"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[76px] font-serif font-medium mb-4 relative z-10"
           >
             <span className="text-jade-800">Contáctanos</span>
           </motion.h2>
