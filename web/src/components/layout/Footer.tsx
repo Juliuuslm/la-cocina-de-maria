@@ -7,8 +7,8 @@ import Image from 'next/image';
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="relative text-jade-800 overflow-hidden" style={{ backgroundColor: '#fef3c7' }}>
-      <div className="container mx-auto px-4 py-16 relative z-10">
+    <footer className="relative text-jade-800 overflow-hidden w-full" style={{ backgroundColor: '#fef3c7' }}>
+      <div className="container mx-auto px-4 py-16 relative z-10 w-full max-w-7xl">
         
         {/* Main Footer Content - 3 Columns */}
         <div className="grid md:grid-cols-3 gap-12 lg:gap-16">
@@ -177,6 +177,21 @@ export const Footer: React.FC = () => {
                 <MessageCircle className="w-4 h-4" />
               </a>
             </div>
+          </div>
+        </motion.div>
+
+        {/* Featured By Section */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.8 }}
+          viewport={{ once: true }}
+          className="mt-6 pt-4 border-t border-jade-700/10"
+        >
+          <div className="text-center">
+            <p className="text-jade-500 text-xs">
+              Featured By Novalabss
+            </p>
           </div>
         </motion.div>
       </div>

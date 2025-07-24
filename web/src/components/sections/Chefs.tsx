@@ -106,8 +106,8 @@ const ChefCard = ({ chef, index }: { chef: Chef, index: number }) => (
 
 export const Chefs: React.FC = () => {
   return (
-    <section id="chefs" className="py-[75px] relative">
-      <div className="container mx-auto px-4">
+    <section id="chefs" className="py-[75px] relative w-full overflow-x-hidden">
+      <div className="container mx-auto px-4 w-full max-w-7xl">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}

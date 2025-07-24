@@ -32,8 +32,8 @@ const StatCard = ({ icon: Icon, value, label, delay }: {
 
 export const About: React.FC = () => {
   return (
-    <section id="about" className="py-[75px] relative">
-      <div className="container mx-auto px-4">
+    <section id="about" className="py-[75px] relative w-full overflow-x-hidden">
+      <div className="container mx-auto px-4 w-full max-w-7xl">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -162,13 +162,6 @@ export const About: React.FC = () => {
                       "Cada platillo es una carta de amor a México"
                     </p>
                   </div>
-                  
-                  {/* Decorative Elements */}
-                  <div className="absolute top-4 right-4 w-12 h-12 bg-pink-500/80 backdrop-blur-sm rounded-full opacity-90 flex items-center justify-center">
-                    <div className="w-6 h-6 bg-coral-400 rounded-full"></div>
-                  </div>
-                  <div className="absolute bottom-4 right-4 w-8 h-8 bg-jade-400/80 backdrop-blur-sm rounded-full opacity-90"></div>
-                  <div className="absolute top-1/2 right-4 w-4 h-4 bg-gold-400/80 backdrop-blur-sm rounded-full opacity-80"></div>
                 </div>
               </div>
             </div>

@@ -70,8 +70,8 @@ export const Hero: React.FC = () => {
   };
 
   return (
-    <section id="hero" className="relative min-h-screen pt-20">
-      <div className="container mx-auto px-4 py-12 sm:py-16 lg:py-[75px]">
+    <section id="hero" className="relative min-h-screen pt-20 w-full overflow-x-hidden">
+      <div className="container mx-auto px-4 py-12 sm:py-16 lg:py-[75px] w-full max-w-7xl">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[80vh]">
           
           {/* Content Left */}
@@ -95,7 +95,7 @@ export const Hero: React.FC = () => {
               </motion.p>
               <motion.h1 
                 variants={textReveal}
-                className="text-6xl sm:text-7xl md:text-8xl lg:text-7xl xl:text-[128px] font-serif font-semibold text-jade-800 leading-[100%] relative z-10"
+                className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[96px] font-serif font-semibold text-jade-800 leading-[100%] relative z-10 break-words"
               >
                 La Cocina <br />
                 <motion.span 
@@ -259,30 +259,6 @@ export const Hero: React.FC = () => {
                       Nuestra especialidad de la casa
                     </motion.p>
                   </motion.div>
-                  
-                  {/* Decorative Elements - Mexican inspired */}
-                  <motion.div 
-                    variants={floatingAnimation}
-                    initial="initial"
-                    animate="animate"
-                    className="absolute top-4 right-4 w-12 h-12 bg-coral-400/80 backdrop-blur-sm rounded-full opacity-90 flex items-center justify-center"
-                  >
-                    <div className="w-6 h-6 bg-pink-500 rounded-full"></div>
-                  </motion.div>
-                  <motion.div 
-                    variants={floatingAnimation}
-                    initial="initial"
-                    animate="animate"
-                    transition={{ delay: 0.5 }}
-                    className="absolute bottom-4 right-4 w-8 h-8 bg-jade-400/80 backdrop-blur-sm rounded-full opacity-90"
-                  ></motion.div>
-                  <motion.div 
-                    variants={floatingAnimation}
-                    initial="initial"
-                    animate="animate"
-                    transition={{ delay: 1 }}
-                    className="absolute top-1/2 right-4 w-4 h-4 bg-gold-400/80 backdrop-blur-sm rounded-full opacity-80"
-                  ></motion.div>
                 </motion.div>
               </motion.div>
             </div>

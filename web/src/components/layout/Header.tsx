@@ -60,7 +60,7 @@ export const Header: React.FC = () => {
         backgroundColor: isScrolled ? '#fef3c7' : 'rgba(254, 243, 199, 0.95)' 
       }}
     >
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 w-full max-w-7xl">
         <div className="flex items-center justify-between py-4">
           
           {/* Logo */}

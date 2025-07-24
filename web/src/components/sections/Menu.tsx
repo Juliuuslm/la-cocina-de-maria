@@ -194,8 +194,8 @@ export const Menu: React.FC = () => {
   };
 
   return (
-    <section id="menu" className="py-12 sm:py-16 lg:py-[75px] relative">
-      <div className="container mx-auto px-4">
+    <section id="menu" className="py-12 sm:py-16 lg:py-[75px] relative w-full overflow-x-hidden">
+      <div className="container mx-auto px-4 w-full max-w-7xl">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}

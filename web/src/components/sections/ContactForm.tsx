@@ -127,8 +127,8 @@ export const ContactForm: React.FC = () => {
   } = useContactForm();
 
   return (
-    <section id="contactform" className="py-[75px] relative">
-      <div className="container mx-auto px-4">
+    <section id="contactform" className="py-[75px] relative w-full overflow-x-hidden">
+      <div className="container mx-auto px-4 w-full max-w-7xl">
         {/* Section Header */}
         <motion.div
           variants={staggerContainer}

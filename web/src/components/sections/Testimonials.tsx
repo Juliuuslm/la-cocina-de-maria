@@ -33,7 +33,7 @@ const testimonials: Testimonial[] = [
     location: "Ciudad de México",
     text: "El mole poblano transporta directamente a Puebla, con sabores auténticos que solo una receta familiar puede ofrecer.",
     rating: 5,
-    avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face",
+    avatar: "https://www.dzoom.org.es/wp-content/uploads/2020/02/portada-foto-perfil-redes-sociales-consejos-734x489.jpg",
     date: "Hace 2 semanas"
   },
   {
@@ -248,8 +248,8 @@ export const Testimonials: React.FC = () => {
   };
 
   return (
-    <section id="testimonials" className="py-12 sm:py-16 lg:py-[75px] relative">
-      <div className="container mx-auto px-4">
+    <section id="testimonials" className="py-12 sm:py-16 lg:py-[75px] relative w-full overflow-x-hidden">
+      <div className="container mx-auto px-4 w-full max-w-7xl">
         {/* Section Header */}
         <motion.div
           variants={staggerContainer}
