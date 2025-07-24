@@ -70,7 +70,7 @@ export const Hero: React.FC = () => {
   };
 
   return (
-    <section id="hero" className="relative min-h-screen pt-20 w-full overflow-x-hidden">
+    <section id="hero" className="relative min-h-screen pt-20 w-full">
       <div className="container mx-auto px-4 py-12 sm:py-16 lg:py-[75px] w-full max-w-7xl">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[80vh]">
           

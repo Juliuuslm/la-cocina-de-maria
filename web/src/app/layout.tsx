@@ -32,12 +32,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className="overflow-x-hidden">
+    <html lang="es">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden w-full`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased w-full`}
         suppressHydrationWarning={true}
       >
-        <div className="w-full overflow-x-hidden">
+        <div className="w-full">
           {children}
         </div>
       </body>

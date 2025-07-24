@@ -248,7 +248,7 @@ export const Testimonials: React.FC = () => {
   };
 
   return (
-    <section id="testimonials" className="py-12 sm:py-16 lg:py-[75px] relative w-full overflow-x-hidden">
+    <section id="testimonials" className="py-12 sm:py-16 lg:py-[75px] relative w-full">
       <div className="container mx-auto px-4 w-full max-w-7xl">
         {/* Section Header */}
         <motion.div

@@ -147,11 +147,11 @@ const MenuCard = ({
       <div className="flex items-start space-x-4">
         {/* Dish Image */}
         <div className="flex-shrink-0">
-          <div className="w-24 h-24 rounded-full overflow-hidden shadow-warm">
+          <div className="w-32 h-28 rounded-2xl overflow-hidden shadow-warm">
             <img
               src={item.image}
               alt={item.name}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover object-top"
             />
           </div>
         </div>
@@ -194,7 +194,7 @@ export const Menu: React.FC = () => {
   };
 
   return (
-    <section id="menu" className="py-12 sm:py-16 lg:py-[75px] relative w-full overflow-x-hidden">
+    <section id="menu" className="py-12 sm:py-16 lg:py-[75px] relative w-full">
       <div className="container mx-auto px-4 w-full max-w-7xl">
         {/* Section Header */}
         <motion.div
@@ -230,7 +230,7 @@ export const Menu: React.FC = () => {
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-start">
           
           {/* Photo Gallery - Left Side */}
-          <div className="lg:sticky lg:top-24">
+          <div className="lg:sticky lg:top-24 lg:self-start">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -261,7 +261,7 @@ export const Menu: React.FC = () => {
                   <img
                     src={selectedItem.image}
                     alt={selectedItem.name}
-                    className="w-full h-auto max-h-64 sm:max-h-80 md:max-h-96 lg:max-h-[650px] min-h-48 sm:min-h-64 lg:min-h-[500px] object-contain"
+                    className="w-full h-auto max-h-64 sm:max-h-80 md:max-h-96 lg:max-h-[650px] min-h-48 sm:min-h-64 lg:min-h-[500px] object-cover rounded-2xl"
                   />
                 
                 {/* Selection indicator */}
@@ -283,7 +283,7 @@ export const Menu: React.FC = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
-            className="space-y-6"
+            className="space-y-6 min-h-screen"
           >
             <div className="text-center lg:text-left mb-6">
               <h3 className="text-2xl font-serif font-bold text-jade-800 mb-2">

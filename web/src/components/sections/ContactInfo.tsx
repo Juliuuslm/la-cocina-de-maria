@@ -32,7 +32,7 @@ const InfoCard = ({ title, children, delay }: {
 
 export const ContactInfo: React.FC = () => {
   return (
-    <section id="contacto" className="py-[75px] relative w-full overflow-x-hidden">
+    <section id="contacto" className="py-[75px] relative w-full">
       <div className="container mx-auto px-4 w-full max-w-7xl">
         {/* Section Header */}
         <motion.div
