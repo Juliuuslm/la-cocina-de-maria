@@ -57,7 +57,7 @@ export const About: React.FC = () => {
           </motion.div>
           
           {/* Papel Picado Background Pattern */}
-          <div className="absolute -top-8 -left-8 w-40 h-32 opacity-15 pointer-events-none">
+          <div className="absolute -top-2 sm:-top-6 md:-top-8 -left-2 sm:-left-6 md:-left-8 w-32 sm:w-36 md:w-40 h-24 sm:h-28 md:h-32 opacity-15 pointer-events-none">
             <svg viewBox="0 0 160 128" fill="none" className="w-full h-full">
               {/* Papel picado triangular pattern */}
               <path d="M20 0 L40 20 L20 40 L0 20 Z" fill="#E4007C"/>
@@ -167,8 +167,7 @@ export const About: React.FC = () => {
             </div>
 
             {/* Background Decorative Elements */}
-            <div className="absolute -top-6 -right-6 w-48 h-48 bg-pink-200 rounded-full opacity-30 -z-10"></div>
-            <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-jade-200 rounded-full opacity-25 -z-10"></div>
+            <div className="absolute -bottom-2 sm:-bottom-4 md:-bottom-6 -left-2 sm:-left-4 md:-left-6 w-24 sm:w-28 md:w-32 h-24 sm:h-28 md:h-32 bg-jade-200 rounded-full opacity-25 -z-10"></div>
           </motion.div>
         </div>
 

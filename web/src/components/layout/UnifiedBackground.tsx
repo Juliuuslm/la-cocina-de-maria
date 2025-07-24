@@ -23,7 +23,7 @@ export const UnifiedBackground: React.FC<UnifiedBackgroundProps> = ({ children }
         
         {/* Agave silhouette - top left */}
         <div className="absolute top-12 left-2 sm:left-6 md:left-8 opacity-8">
-          <svg width="60" height="80" viewBox="0 0 60 80" fill="none">
+          <svg width="40" height="60" viewBox="0 0 60 80" fill="none" className="w-8 sm:w-12 md:w-15 h-auto">
             <path d="M30 80 L30 50 L38 42 L45 35 M30 60 L25 52 L18 45 M30 70 L40 62 L48 55" 
                   stroke="#8B4513" strokeWidth="2" strokeLinecap="round"/>
           </svg>
@@ -31,7 +31,7 @@ export const UnifiedBackground: React.FC<UnifiedBackgroundProps> = ({ children }
         
         {/* Papel picado - top right corner (safe zone) */}
         <div className="absolute top-8 right-2 sm:right-6 md:right-8 opacity-8">
-          <svg width="35" height="50" viewBox="0 0 40 60" fill="none">
+          <svg width="30" height="40" viewBox="0 0 40 60" fill="none" className="w-6 sm:w-8 md:w-9 h-auto">
             <path d="M8 5 L16 13 L8 21 L0 13 Z" fill="#E4007C" opacity="0.7"/>
             <path d="M24 5 L32 13 L24 21 L16 13 Z" fill="#FF6B4A" opacity="0.7"/>
             <path d="M8 21 L16 29 L8 37 L0 29 Z" fill="#00A693" opacity="0.7"/>
@@ -41,7 +41,7 @@ export const UnifiedBackground: React.FC<UnifiedBackgroundProps> = ({ children }
         
         {/* Small comal - top center */}
         <div className="absolute top-20 left-1/3 opacity-12">
-          <svg width="50" height="50" viewBox="0 0 60 60" fill="none">
+          <svg width="40" height="40" viewBox="0 0 60 60" fill="none" className="w-8 sm:w-10 md:w-12 h-auto">
             <circle cx="30" cy="30" r="22" fill="#2F4F4F" opacity="0.8"/>
             <circle cx="30" cy="30" r="18" fill="#696969" opacity="0.9"/>
             <circle cx="30" cy="30" r="14" stroke="#A9A9A9" strokeWidth="1" fill="none" opacity="0.6"/>
