@@ -42,8 +42,8 @@ html, body {
   min-width: 0;
 }
 
-/* Ensure images and media don't cause overflow */
-img, video, canvas, svg {
+/* Ensure images and media don't cause overflow, except those with object-cover */
+img:not([class*="object-cover"]), video, canvas, svg {
   max-width: 100%;
   height: auto;
 }

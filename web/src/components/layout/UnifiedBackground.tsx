@@ -12,17 +12,17 @@ export const UnifiedBackground: React.FC<UnifiedBackgroundProps> = ({ children }
       {/* Extended gradient for mobile to prevent white line */}
       <div className="md:hidden absolute -bottom-32 left-0 right-0 h-32 bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50 z-0"></div>
       {/* Unified Background Pattern - Mexican Textile Inspired */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 overflow-x-hidden">
         
         {/* === ZONA SUPERIOR (TOP) === */}
-        
+        <div className="overflow-x-hidden">
         {/* Geometric circles - top area */}
-        <div className="absolute top-16 left-12 w-24 h-24 bg-coral-500 rounded-full opacity-10"></div>
-        <div className="absolute top-20 right-16 w-20 h-20 bg-jade-500 rounded-full opacity-12"></div>
+        <div className="absolute top-16 left-2 sm:left-8 md:left-12 w-24 h-24 bg-coral-500 rounded-full opacity-10"></div>
+        <div className="absolute top-20 right-2 sm:right-8 md:right-12 lg:right-16 w-20 h-20 bg-jade-500 rounded-full opacity-12"></div>
         <div className="absolute top-24 left-1/2 w-16 h-16 bg-gold-600 rounded-full opacity-8"></div>
         
         {/* Agave silhouette - top left */}
-        <div className="absolute top-12 left-8 opacity-8">
+        <div className="absolute top-12 left-2 sm:left-6 md:left-8 opacity-8">
           <svg width="60" height="80" viewBox="0 0 60 80" fill="none">
             <path d="M30 80 L30 50 L38 42 L45 35 M30 60 L25 52 L18 45 M30 70 L40 62 L48 55" 
                   stroke="#8B4513" strokeWidth="2" strokeLinecap="round"/>
@@ -30,7 +30,7 @@ export const UnifiedBackground: React.FC<UnifiedBackgroundProps> = ({ children }
         </div>
         
         {/* Papel picado - top right corner (safe zone) */}
-        <div className="absolute top-8 right-8 opacity-8">
+        <div className="absolute top-8 right-2 sm:right-6 md:right-8 opacity-8">
           <svg width="35" height="50" viewBox="0 0 40 60" fill="none">
             <path d="M8 5 L16 13 L8 21 L0 13 Z" fill="#E4007C" opacity="0.7"/>
             <path d="M24 5 L32 13 L24 21 L16 13 Z" fill="#FF6B4A" opacity="0.7"/>
@@ -56,15 +56,17 @@ export const UnifiedBackground: React.FC<UnifiedBackgroundProps> = ({ children }
           </svg>
         </div>
         
-        {/* === ZONA MEDIA (MIDDLE) === */}
+        </div>
         
+        {/* === ZONA MEDIA (MIDDLE) === */}
+        <div className="overflow-x-hidden">
         {/* Geometric circles - middle area */}
-        <div className="absolute top-1/2 left-8 w-20 h-20 bg-jade-400 rounded-full opacity-10"></div>
-        <div className="absolute top-1/2 right-12 w-18 h-18 bg-coral-400 rounded-full opacity-12"></div>
+        <div className="absolute top-1/2 left-2 sm:left-6 md:left-8 w-20 h-20 bg-jade-400 rounded-full opacity-10"></div>
+        <div className="absolute top-1/2 right-2 sm:right-8 md:right-12 w-18 h-18 bg-coral-400 rounded-full opacity-12"></div>
         <div className="absolute top-2/5 right-1/3 w-14 h-14 bg-pink-500 rounded-full opacity-10"></div>
         
         {/* Cazuela - middle left */}
-        <div className="absolute top-1/3 left-16 opacity-18">
+        <div className="absolute top-1/3 left-2 sm:left-12 md:left-16 opacity-18">
           <svg width="70" height="70" viewBox="0 0 80 80" fill="none">
             <ellipse cx="40" cy="60" rx="22" ry="7" fill="#8B4513" opacity="0.8"/>
             <rect x="18" y="40" width="44" height="20" rx="3" fill="#A0522D" opacity="0.9"/>
@@ -78,7 +80,7 @@ export const UnifiedBackground: React.FC<UnifiedBackgroundProps> = ({ children }
         </div>
         
         {/* Large knife - middle right */}
-        <div className="absolute top-2/5 right-16 opacity-15">
+        <div className="absolute top-2/5 right-2 sm:right-12 md:right-16 opacity-15">
           <svg width="45" height="70" viewBox="0 0 50 80" fill="none">
             <rect x="23" y="15" width="4" height="45" rx="2" fill="#C0C0C0" opacity="0.9"/>
             <path d="M20 15 L30 15 L30 40 L25 45 Z" fill="#DCDCDC" opacity="0.8"/>
@@ -88,7 +90,7 @@ export const UnifiedBackground: React.FC<UnifiedBackgroundProps> = ({ children }
         </div>
         
         {/* Wooden spoon - middle left area */}
-        <div className="absolute top-3/5 left-20 opacity-16">
+        <div className="absolute top-3/5 left-2 sm:left-16 md:left-20 opacity-16">
           <svg width="45" height="65" viewBox="0 0 60 80" fill="none">
             <ellipse cx="30" cy="20" rx="15" ry="10" fill="#D2691E" opacity="0.8"/>
             <ellipse cx="30" cy="18" rx="12" ry="8" fill="#DEB887" opacity="0.9"/>
@@ -99,7 +101,7 @@ export const UnifiedBackground: React.FC<UnifiedBackgroundProps> = ({ children }
         </div>
         
         {/* Large pot - middle right area */}
-        <div className="absolute top-1/2 right-20 opacity-17">
+        <div className="absolute top-1/2 right-2 sm:right-16 md:right-20 opacity-17">
           <svg width="65" height="65" viewBox="0 0 70 70" fill="none">
             <ellipse cx="35" cy="55" rx="18" ry="5" fill="#8B4513" opacity="0.8"/>
             <rect x="17" y="38" width="36" height="17" rx="2" fill="#A0522D" opacity="0.9"/>
@@ -112,15 +114,17 @@ export const UnifiedBackground: React.FC<UnifiedBackgroundProps> = ({ children }
           </svg>
         </div>
         
-        {/* === ZONA INFERIOR (BOTTOM) === */}
+        </div>
         
+        {/* === ZONA INFERIOR (BOTTOM) === */}
+        <div className="overflow-x-hidden">
         {/* Geometric circles - bottom area */}
         <div className="absolute bottom-32 left-1/4 w-16 h-16 bg-gold-600 rounded-full opacity-10"></div>
         <div className="absolute bottom-24 right-1/3 w-18 h-18 bg-coral-500 rounded-full opacity-12"></div>
-        <div className="absolute bottom-40 right-8 w-14 h-14 bg-jade-500 rounded-full opacity-8"></div>
+        <div className="absolute bottom-40 right-2 sm:right-6 md:right-8 w-14 h-14 bg-jade-500 rounded-full opacity-8"></div>
         
         {/* Pan - bottom left */}
-        <div className="absolute bottom-32 left-16 opacity-18">
+        <div className="absolute bottom-32 left-2 sm:left-12 md:left-16 opacity-18">
           <svg width="75" height="45" viewBox="0 0 90 50" fill="none">
             <ellipse cx="30" cy="30" rx="22" ry="15" fill="#2F4F4F" opacity="0.8"/>
             <ellipse cx="30" cy="27" rx="20" ry="13" fill="#696969" opacity="0.9"/>
@@ -144,7 +148,7 @@ export const UnifiedBackground: React.FC<UnifiedBackgroundProps> = ({ children }
         </div>
         
         {/* Crossed cutlery - bottom right */}
-        <div className="absolute bottom-36 right-20 opacity-20">
+        <div className="absolute bottom-36 right-2 sm:right-16 md:right-20 opacity-20">
           <svg width="60" height="60" viewBox="0 0 70 70" fill="none">
             <rect x="20" y="15" width="3" height="40" rx="1.5" fill="#C0C0C0" opacity="0.9" transform="rotate(25 35 35)"/>
             <rect x="17" y="13" width="2" height="10" rx="1" fill="#C0C0C0" opacity="0.8" transform="rotate(25 35 35)"/>
@@ -183,6 +187,7 @@ export const UnifiedBackground: React.FC<UnifiedBackgroundProps> = ({ children }
           <svg width="30" height="30" viewBox="0 0 35 35" fill="none">
             <path d="M17 6 L28 26 L6 26 Z" stroke="#A34E29" strokeWidth="2" fill="#FEEDDC"/>
           </svg>
+        </div>
         </div>
         
       </div>
