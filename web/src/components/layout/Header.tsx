@@ -50,7 +50,7 @@ export const Header: React.FC = () => {
     
     // Pequeño delay para que se cierre el menú primero
     setTimeout(() => {
-      const element = document.querySelector(href);
+      const element = document.querySelector(href) as HTMLElement;
       if (element) {
         const headerHeight = 80; // Altura del header fijo
         const elementPosition = element.offsetTop - headerHeight;
