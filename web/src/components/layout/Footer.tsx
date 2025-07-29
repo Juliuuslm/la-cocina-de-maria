@@ -189,9 +189,14 @@ export const Footer: React.FC = () => {
           className="mt-6 pt-4 border-t border-jade-700/10"
         >
           <div className="text-center">
-            <p className="text-jade-500 text-xs">
+            <a 
+              href="https://novalabss.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-jade-500 hover:text-jade-600 text-base transition-colors duration-300"
+            >
               Featured By Novalabss
-            </p>
+            </a>
           </div>
         </motion.div>
       </div>

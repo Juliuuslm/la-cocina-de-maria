@@ -71,7 +71,7 @@ export const Hero: React.FC = () => {
 
   return (
     <section id="hero" className="relative min-h-screen pt-20 w-full max-w-full overflow-x-hidden">
-      <div className="container mx-auto px-4 sm:px-6 py-12 sm:py-16 lg:py-[75px] w-full max-w-full safe-area-x">
+      <div className="container mx-auto px-4 sm:px-6 py-12 sm:py-16 lg:py-[75px] w-full max-w-full lg:max-w-7xl safe-area-x">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[80vh]">
           
           {/* Content Left */}
@@ -197,7 +197,7 @@ export const Hero: React.FC = () => {
                     variant="outline" 
                     size="lg"
                     onClick={() => document.getElementById('menu')?.scrollIntoView({ behavior: 'smooth' })}
-                    className="w-full sm:w-auto min-h-12 sm:min-h-14 px-6 py-3"
+                    className="w-full sm:w-auto min-h-12 sm:min-h-14 px-6 py-3 hover:bg-white hover:text-black hover:border-black"
                   >
                     Ver Menú
                   </Button>
