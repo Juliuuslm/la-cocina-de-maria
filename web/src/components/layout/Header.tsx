@@ -45,6 +45,17 @@ export const Header: React.FC = () => {
     window.open('https://wa.me/5215512345678?text=Hola, me gustaría hacer una reservación', '_blank');
   };
 
+  const handleNavClick = (href: string) => {
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({ 
+        behavior: 'smooth', 
+        block: 'start' 
+      });
+    }
+    setIsMenuOpen(false);
+  };
+
 
   return (
     <motion.header
@@ -60,13 +71,13 @@ export const Header: React.FC = () => {
         backgroundColor: isScrolled ? '#fef3c7' : 'rgba(254, 243, 199, 0.95)' 
       }}
     >
-      <div className="container mx-auto px-4 w-full max-w-7xl">
-        <div className="flex items-center justify-between py-4">
+      <div className="container mx-auto px-4 sm:px-6 w-full max-w-full overflow-hidden">
+        <div className="flex items-center justify-between py-4 w-full min-w-0 safe-area-x">
           
           {/* Logo */}
           <motion.div
             variants={fadeInLeft}
-            className="flex items-center space-x-3"
+            className="flex items-center space-x-2 sm:space-x-3 flex-shrink-0 min-w-0"
           >
             <div className="relative">
               <Image
@@ -77,11 +88,11 @@ export const Header: React.FC = () => {
                 className="rounded-full shadow-warm"
               />
             </div>
-            <div>
-              <h1 className="text-xl font-serif font-bold text-jade-800">
+            <div className="min-w-0 flex-shrink">
+              <h1 className="text-lg sm:text-xl font-serif font-bold text-jade-800 truncate">
                 La Cocina de María
               </h1>
-              <p className="text-xs text-jade-700 font-medium">
+              <p className="text-xs text-jade-700 font-medium truncate">
                 Auténtica cocina mexicana
               </p>
             </div>
@@ -95,24 +106,24 @@ export const Header: React.FC = () => {
             className="hidden lg:flex items-center space-x-8"
           >
             {navItems.map((item, index) => (
-              <motion.a
+              <motion.button
                 key={item.href}
                 variants={fadeInRight}
-                href={item.href}
+                onClick={() => handleNavClick(item.href)}
                 className="text-jade-800 hover:text-pink-500 font-medium transition-colors duration-300 relative group"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
                 {item.label}
                 <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-coral-400 group-hover:w-full transition-all duration-300"></span>
-              </motion.a>
+              </motion.button>
             ))}
           </motion.nav>
 
           {/* Contact Info & Actions */}
           <motion.div
             variants={fadeInRight}
-            className="flex items-center space-x-4"
+            className="flex items-center space-x-2 sm:space-x-4 flex-shrink-0"
           >
             {/* Contact Info - Hidden on mobile */}
             <div className="hidden xl:flex flex-col items-end text-sm">
@@ -190,17 +201,16 @@ export const Header: React.FC = () => {
             >
               <nav className="flex flex-col space-y-4">
                 {navItems.map((item, index) => (
-                  <motion.a
+                  <motion.button
                     key={item.href}
-                    href={item.href}
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.1 }}
-                    onClick={() => setIsMenuOpen(false)}
-                    className="text-jade-800 hover:text-pink-500 font-medium transition-colors duration-300 py-2"
+                    onClick={() => handleNavClick(item.href)}
+                    className="text-jade-800 hover:text-pink-500 font-medium transition-colors duration-300 py-2 text-left"
                   >
                     {item.label}
-                  </motion.a>
+                  </motion.button>
                 ))}
                 
                 {/* Mobile Contact Info */}
@@ -237,8 +247,6 @@ export const Header: React.FC = () => {
         </AnimatePresence>
       </div>
 
-      {/* Mexican Decorative Border */}
-      <div className="absolute bottom-0 left-0 right-0 h-1 bg-coral-500 opacity-60"></div>
     </motion.header>
   );
 };

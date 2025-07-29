@@ -70,8 +70,8 @@ export const Hero: React.FC = () => {
   };
 
   return (
-    <section id="hero" className="relative min-h-screen pt-20 w-full">
-      <div className="container mx-auto px-4 py-12 sm:py-16 lg:py-[75px] w-full max-w-7xl">
+    <section id="hero" className="relative min-h-screen pt-20 w-full max-w-full overflow-x-hidden">
+      <div className="container mx-auto px-4 sm:px-6 py-12 sm:py-16 lg:py-[75px] w-full max-w-full safe-area-x">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[80vh]">
           
           {/* Content Left */}
@@ -95,7 +95,7 @@ export const Hero: React.FC = () => {
               </motion.p>
               <motion.h1 
                 variants={textReveal}
-                className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[96px] font-serif font-semibold text-jade-800 leading-[100%] relative z-10 break-words"
+                className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-serif font-semibold text-jade-800 leading-[100%] relative z-10 break-words max-w-full overflow-hidden"
               >
                 La Cocina <br />
                 <motion.span 

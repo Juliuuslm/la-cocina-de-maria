@@ -8,9 +8,7 @@ interface UnifiedBackgroundProps {
 
 export const UnifiedBackground: React.FC<UnifiedBackgroundProps> = ({ children }) => {
   return (
-    <div className="relative min-h-[100dvh] md:min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50">
-      {/* Extended gradient for mobile to prevent white line */}
-      <div className="md:hidden absolute -bottom-32 left-0 right-0 h-32 bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50 z-0"></div>
+    <div className="relative min-h-[100dvh] md:min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50 w-full max-w-full overflow-x-hidden">
       {/* Unified Background Pattern - Mexican Textile Inspired */}
       <div className="absolute inset-0 overflow-x-hidden">
         

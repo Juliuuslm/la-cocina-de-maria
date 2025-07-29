@@ -34,10 +34,10 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased w-full`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased w-full max-w-full overflow-x-hidden`}
         suppressHydrationWarning={true}
       >
-        <div className="w-full">
+        <div className="w-full max-w-full overflow-x-hidden">
           {children}
         </div>
       </body>

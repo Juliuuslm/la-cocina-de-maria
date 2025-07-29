@@ -35,11 +35,27 @@ html {
 /* Prevent horizontal scroll */
 html, body {
   max-width: 100vw;
+  overflow-x: hidden;
 }
 
 /* Prevent overflow on all containers */
 * {
   min-width: 0;
+  box-sizing: border-box;
+}
+
+/* Ensure all containers respect viewport */
+body, #__next, [data-nextjs-scroll-focus-boundary] {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+/* Safe area for mobile */
+@supports (padding: max(0px)) {
+  .safe-area-x {
+    padding-left: max(1rem, env(safe-area-inset-left));
+    padding-right: max(1rem, env(safe-area-inset-right));
+  }
 }
 
 /* Ensure images and media don't cause overflow, except those with object-cover */
