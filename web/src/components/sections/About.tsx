@@ -76,9 +76,32 @@ export const About: React.FC = () => {
             </svg>
           </div>
 
-          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[76px] font-serif font-medium mb-4 relative z-10">
-            <span className="text-jade-800">Nuestra</span> <span className="text-pink-500">Historia</span>
-          </h2>
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            viewport={{ once: true }}
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[76px] font-serif font-medium mb-4 relative z-10"
+          >
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              viewport={{ once: true }}
+              className="overflow-hidden"
+            >
+              <span className="text-jade-800 inline-block">Nuestra{" "}</span>
+              <motion.span 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.7 }}
+                viewport={{ once: true }}
+                className="text-pink-500 inline-block"
+              >
+                Historia
+              </motion.span>
+            </motion.div>
+          </motion.div>
           <p className="text-base text-jade-600 max-w-2xl mx-auto font-normal relative z-10">
             Una tradición familiar que comenzó hace 8 años en el corazón de Roma Norte
           </p>

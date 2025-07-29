@@ -16,7 +16,9 @@ import {
   buttonPress,
   floatingAnimation,
   scaleIn,
-  viewportConfig 
+  viewportConfig,
+  lineByLineReveal,
+  lineReveal
 } from '@/lib/animations';
 import { useParallax, useParallaxRotate } from '@/hooks/useParallax';
 
@@ -93,18 +95,19 @@ export const Hero: React.FC = () => {
               >
                 Bienvenidos a
               </motion.p>
-              <motion.h1 
-                variants={textReveal}
+              <motion.div
+                variants={lineByLineReveal}
+                initial="hidden"
+                animate="visible"
                 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-serif font-semibold text-jade-800 leading-[100%] relative z-10 break-words max-w-full overflow-hidden"
               >
-                La Cocina <br />
-                <motion.span 
-                  variants={textReveal}
-                  className="text-pink-500 drop-shadow-sm"
-                >
-                  de María
-                </motion.span>
-              </motion.h1>
+                <motion.div variants={lineReveal} className="overflow-hidden">
+                  <span className="inline-block">La Cocina</span>
+                </motion.div>
+                <motion.div variants={lineReveal} className="overflow-hidden">
+                  <span className="inline-block text-pink-500 drop-shadow-sm">de María</span>
+                </motion.div>
+              </motion.div>
             </motion.div>
 
             {/* Tagline */}

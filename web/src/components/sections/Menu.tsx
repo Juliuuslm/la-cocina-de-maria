@@ -218,9 +218,32 @@ export const Menu: React.FC = () => {
             <div className="h-px bg-gold-400 flex-1 max-w-32"></div>
           </motion.div>
           
-          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[76px] font-serif font-medium mb-4 relative z-10">
-            <span className="text-jade-800">Nuestros</span> <span className="text-pink-500">Platillos</span>
-          </h2>
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            viewport={{ once: true }}
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[76px] font-serif font-medium mb-4 relative z-10"
+          >
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              viewport={{ once: true }}
+              className="overflow-hidden"
+            >
+              <span className="text-jade-800 inline-block">Nuestros{" "}</span>
+              <motion.span 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.7 }}
+                viewport={{ once: true }}
+                className="text-pink-500 inline-block"
+              >
+                Platillos
+              </motion.span>
+            </motion.div>
+          </motion.div>
           <p className="text-base text-jade-600 max-w-2xl mx-auto font-normal relative z-10">
             Auténticos sabores mexicanos preparados con recetas familiares y ingredientes de la más alta calidad
           </p>

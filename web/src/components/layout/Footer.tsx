@@ -195,7 +195,7 @@ export const Footer: React.FC = () => {
               rel="noopener noreferrer"
               className="text-jade-500 hover:text-jade-600 text-base transition-colors duration-300"
             >
-              Featured By Novalabss
+              Creado Por Novalabss
             </a>
           </div>
         </motion.div>

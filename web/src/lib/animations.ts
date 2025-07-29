@@ -324,3 +324,32 @@ export const customEasing = {
   elastic: "easeOut",
   sharp: "easeInOut"
 };
+
+// Progressive text reveal - línea por línea
+export const lineByLineReveal: Variants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.15,
+      delayChildren: 0.1
+    }
+  }
+};
+
+export const lineReveal: Variants = {
+  hidden: { 
+    opacity: 0, 
+    y: 20,
+    skewY: 1
+  },
+  visible: { 
+    opacity: 1, 
+    y: 0,
+    skewY: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut"
+    }
+  }
+};
+
